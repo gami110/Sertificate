@@ -8,10 +8,7 @@ def draw_12(text): # Функция для рисования на исходн�
     image = Image.open('Certificate.png')
     draw = ImageDraw.Draw(image)
     font = ImageFont.truetype('MyriadPro.ttf', 58)
-    word = text[2]
-    new_word = word.replace("ия", "ии")
-
-    draw.text((1430, 918), new_word, font=font,
+    draw.text((1430, 918), text[2], font=font,
               fill=(12, 12, 12))
     for numText, coordinates_x, coordinates_y, sizeFont in my_coords:
         # Создаем объект ImageDraw
